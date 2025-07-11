@@ -1,4 +1,3 @@
-markdown
 # EMG Force Monitoring System - GUI Interface
 
 A comprehensive graphical interface for real-time EMG sensor monitoring with muscle activation analysis.
@@ -22,7 +21,7 @@ A comprehensive graphical interface for real-time EMG sensor monitoring with mus
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone (https://github.com/jupacheco1407/DelsysGUI)
    cd your-repo
 Install dependencies:
 
