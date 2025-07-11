@@ -34,7 +34,6 @@ bash
 python GUI.Final.py
 Usage Guide
 1. Connection Phase
-https://via.placeholder.com/400x300?text=Connection+Screen
 
 Click "Connect" to initialize Trigno Base connection
 
@@ -43,7 +42,6 @@ System will automatically detect available EMG sensors
 Status message will confirm successful connection
 
 2. Configuration Phase
-https://via.placeholder.com/400x300?text=Configuration+Screen
 
 Enter movement name (e.g., "Bicep Curl")
 
@@ -62,8 +60,7 @@ For "Not Expected" muscles, select reference sensor
 Click "Continue" to proceed
 
 3. Calibration Phase
-https://via.placeholder.com/400x300?text=Calibration+Screen
-
+4. 
 Follow on-screen instructions for each sensor:
 
 Click "Start Calibration"
@@ -77,7 +74,6 @@ Progress automatically advances to next sensor
 All sensors calibrated message appears when complete
 
 4. Monitoring Phase
-https://via.placeholder.com/400x300?text=Monitoring+Screen
 
 Click "Start Monitoring" to begin
 
@@ -98,14 +94,7 @@ Color	Meaning
 🟢 Light Green	Low expected activation
 🟡 Yellow	Moderate unexpected activation
 🔴 Red	Significant unexpected activation
-Troubleshooting
-Issue	Solution
-Connection fails	Check Trigno Base power/connection
-No sensors detected	Verify sensor pairing and placement
-Inconsistent readings	Recalibrate and check sensor contact
-High noise levels	Ensure proper skin preparation
-Development
-Dependencies
+
 PySide6 >= 6.4.0
 
 AeroPy >= 1.2.0
