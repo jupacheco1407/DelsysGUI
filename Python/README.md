@@ -1,8 +1,6 @@
 markdown
 # EMG Force Monitoring System - GUI Interface
 
-![EMG Monitoring GUI](https://via.placeholder.com/800x400?text=EMG+Monitoring+GUI+Screenshot) <!-- Add actual screenshot later -->
-
 A comprehensive graphical interface for real-time EMG sensor monitoring with muscle activation analysis.
 
 ## Features
