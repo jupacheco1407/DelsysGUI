@@ -1,96 +1,67 @@
-# EMG Force Monitoring System - GUI Interface
+# EMG Sensor Monitoring GUI
 
-A comprehensive graphical interface for real-time EMG sensor monitoring with muscle activation analysis.
+A comprehensive graphical interface for real-time EMG sensor monitoring and muscle activation analysis, developed using the Delsys API and built with PySide6 (Qt). This GUI provides an intuitive and structured workflow from sensor connection to real-time force monitoring, tailored for biomechanical and physiological research.
+
+---
 
 ## Features
 
-- 🖥️ Modern Qt-based GUI with dark theme
-- 🔄 Multi-stage workflow: Connect → Configure → Calibrate → Monitor
-- 📊 Real-time force visualization with color-coded progress bars
-- 💪 Muscle/sensor mapping configuration
-- 🚨 Incorrect activation detection and alerts
-- 📈 Calibration system for personalized force measurement
+- Modern Qt-based GUI with dark theme  
+- Multi-stage workflow: Connect → Configure → Calibrate → Monitor  
+- Real-time force visualization with color-coded progress bars  
+- Muscle/sensor mapping for custom labeling  
+- Automatic detection of incorrect activations and alerts  
+- Personalized calibration system for accurate force measurement  
+
+---
 
 ## Installation
 
 ### Prerequisites
+
 - Python 3.8+
-- Trigno Base system and sensors
-- AeroPy library
+- Delsys Trigno Base System and EMG Sensors
+- Delsys AeroPy Library
 
 ### Steps
-1. Clone the repository:
-2. 
-Install dependencies:
 
-bash
-pip install PySide6 AeroPy
-Run the application:
+1. Clone the repository
+2. Install dependencies 
+3. Run the application -> GUI.py
+   Note: Make sure the Delsys API is installed and properly configured on your machine.
 
-bash
-python GUI.Final.py
-### Usage Guide
-## 1. Connection Phase
+## Usage Guide
 
-Click "Connect" to initialize Trigno Base connection
+### 1. Connection Phase
 
-System will automatically detect available EMG sensors
+- Click **"Connect"** to initialize the Trigno Base system.
+- The system will automatically detect connected EMG sensors.
+- A status message will confirm successful connection.
 
-Status message will confirm successful connection
+### 2. Configuration Phase
 
-## 2. Configuration Phase
+- Enter the movement name (e.g., `Bicep Curl`).
+- For each sensor:
+  - Assign a muscle name (e.g., `Biceps Brachii`).
+  - Define activation expectation:
+    - **Expected** for muscles that should be active.
+    - **Not Expected** for muscles that should remain inactive.
+- For "Not Expected" muscles, select a **reference sensor**.
+- Click **"Continue"** to proceed.
 
-Enter movement name (e.g., "Bicep Curl")
+### 3. Calibration Phase
 
-For each sensor:
+- Follow the on-screen instructions:
+  - Click **"Start Calibration"** for each sensor.
+  - Apply maximum voluntary contraction for approximately **5 seconds**.
+  - The system will capture the peak force and automatically proceed to the next sensor.
+- A message will confirm when all sensors have been calibrated.
 
-Map to muscle name (e.g., "Biceps Brachii")
+### 4. Monitoring Phase
 
-Set activation expectation:
-
-✅ "Expected" for primary movers
-
-❌ "Not Expected" for muscles that should remain inactive
-
-For "Not Expected" muscles, select reference sensor
-
-Click "Continue" to proceed
-
-## 3. Calibration Phase
-Follow on-screen instructions for each sensor:
-
-Click "Start Calibration"
-
-Apply maximum force for 5 seconds
-
-System captures peak values
-
-Progress automatically advances to next sensor
-
-All sensors calibrated message appears when complete
-
-## 4. Monitoring Phase
-
-Click "Start Monitoring" to begin
-
-Real-time feedback includes:
-
-Force percentage bars (0-100%)
-
-Color-coded activation levels
-
-Warning messages for incorrect patterns
-
-Global alert bar shows significant deviations
-
-Understanding the Visual Feedback
-Color	Meaning
-🟢 Dark Green	High expected activation (>70%)
-🟢 Medium Green	Moderate expected activation (>40%)
-🟢 Light Green	Low expected activation
-🟡 Yellow	Moderate unexpected activation
-🔴 Red	Significant unexpected activation
-
-PySide6 >= 6.4.0
-
-AeroPy >= 1.2.0
+- Click **"Start Monitoring"** to begin real-time feedback.
+- The interface will display:
+  - Force percentage bars (**0–100%**)
+  - Color-coded activation levels
+  - Warnings for incorrect activation patterns
+  - A global alert bar for significant deviations
