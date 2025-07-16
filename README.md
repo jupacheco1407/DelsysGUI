@@ -1,7 +1,6 @@
 # Delsys GUI Integration
 This repository contains a custom Graphical User Interface (GUI) developed using the Delsys API. The API is integrated directly within the Python code to provide an interface for data acquisition, visualization, and control based on the Delsys system
 
-# Readme Delsys API 
 # Delsys Example Apps
 
 ## Overview
