@@ -20,9 +20,7 @@ A comprehensive graphical interface for real-time EMG sensor monitoring with mus
 
 ### Steps
 1. Clone the repository:
-   ```bash
-   git clone (https://github.com/jupacheco1407/DelsysGUI)
-   cd your-repo
+2. 
 Install dependencies:
 
 bash
