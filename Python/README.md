@@ -16,7 +16,7 @@ A comprehensive graphical interface for real-time EMG sensor monitoring with mus
 ### Prerequisites
 - Python 3.8+
 - Trigno Base system and sensors
-- [AeroPy](https://github.com/your-repo/AeroPy) library
+- AeroPy library
 
 ### Steps
 1. Clone the repository:
@@ -31,8 +31,8 @@ Run the application:
 
 bash
 python GUI.Final.py
-Usage Guide
-1. Connection Phase
+### Usage Guide
+## 1. Connection Phase
 
 Click "Connect" to initialize Trigno Base connection
 
@@ -40,7 +40,7 @@ System will automatically detect available EMG sensors
 
 Status message will confirm successful connection
 
-2. Configuration Phase
+## 2. Configuration Phase
 
 Enter movement name (e.g., "Bicep Curl")
 
@@ -58,8 +58,7 @@ For "Not Expected" muscles, select reference sensor
 
 Click "Continue" to proceed
 
-3. Calibration Phase
-4. 
+## 3. Calibration Phase
 Follow on-screen instructions for each sensor:
 
 Click "Start Calibration"
@@ -72,7 +71,7 @@ Progress automatically advances to next sensor
 
 All sensors calibrated message appears when complete
 
-4. Monitoring Phase
+## 4. Monitoring Phase
 
 Click "Start Monitoring" to begin
 
