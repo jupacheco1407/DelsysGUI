@@ -21,7 +21,7 @@ class ForceMonitorThread(QThread):
 
     def __init__(self, base):
         super().__init__()
-    #Monitora EMG data e calcula a porcentagem de força usada
+    #Monitors EMG data and calculates the percentage of force used
     def run(self):
         self.running = True
         while self.running:
@@ -47,7 +47,7 @@ class ForceMonitorThread(QThread):
 class ConfigPage(QWidget):
     configured = Signal(str, dict)
 
-    #Configura os sensores e mapeia os músculos
+    #Configures the sensors and maps the muscles
     def __init__(self, guids):
         super().__init__()
         self.guids = guids
@@ -177,7 +177,7 @@ class ConfigPage(QWidget):
 class ConnectPage(QWidget):
     connected = Signal(object, list)
 
-    #Conecta ao Trigno Base e escaneia os sensores
+    #Connects to the Trigno Base and scans the sensorss
     def __init__(self):
         super().__init__()
         layout = QVBoxLayout(self)
@@ -328,7 +328,7 @@ class CalibratePage(QWidget):
         else:
             self.stop_calibration()
 
-    #Calibra a força máxima do sensor atual
+    #Calibrates the maximum force of the current sensor
     def poll_data(self):
         if time.time() - self.start_time >= 5:
             self.stop_calibration()
@@ -369,7 +369,6 @@ class CalibratePage(QWidget):
         self.button.setText("Next Sensor")
         self.progress_bar.setValue(0)
         
-        #Passa para o próximo sensor ou termina a calibração
         self.current_sensor_index += 1
         if self.current_sensor_index < len(self.guids):
             self.update_sensor_display()
@@ -436,7 +435,7 @@ class MonitorPage(QWidget):
         self.button.clicked.connect(self.start_monitoring)
         layout.addWidget(self.button)
 
-    #Cria as barras de progresso para cada sensor
+    #Creates progress bars for each sensor
     def create_bar(self, channel_guid):
         bar = QProgressBar()
         bar.setRange(0, 100)
@@ -500,7 +499,7 @@ class MonitorPage(QWidget):
         
         self.check_for_incorrect_activation()
 
-    #Verifica se há ativação incorreta dos músculos
+    #Checks for incorrect muscle activation
     def check_for_incorrect_activation(self):
         for alert_label in self.alert_labels.values():
             alert_label.setText("")
@@ -551,7 +550,7 @@ class MonitorPage(QWidget):
         self.thread.force_updated.connect(self.update_display)
         self.thread.start()
 
-#Pagina principal que contém todas as outras páginas
+#Main page that contains all the other pages
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
